@@ -1,6 +1,5 @@
 package com.example.composedemo
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -21,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -38,7 +38,7 @@ class MainActivity : BaseAC() {
                 Surface(
                     modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
-                    LazyListDemo(this)
+                    LazyListDemo()
                 }
             }
         }
@@ -47,7 +47,7 @@ class MainActivity : BaseAC() {
 
 
 @Composable
-fun LazyListDemo(context: Context) {
+fun LazyListDemo() {
     var listItems = mutableListOf<ActivityItem>()
     listItems.add(ActivityItem(ModifierAC::class.simpleName.toString(), ModifierAC::class.java))
 
@@ -56,13 +56,14 @@ fun LazyListDemo(context: Context) {
     ) {
         items(listItems.size) { index ->
             val item = listItems.get(index)
-            MyListItem(description = item.name, item.className, context = context)
+            MyListItem(description = item.name, item.className)
         }
     }
 }
 
 @Composable
-fun MyListItem(description: String, clazz: Class<*>, context: Context) {
+fun MyListItem(description: String, clazz: Class<*>) {
+    val context = LocalContext.current
     Column(
         modifier = Modifier
             .padding(16.dp)
