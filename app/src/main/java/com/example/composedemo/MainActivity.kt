@@ -45,7 +45,6 @@ class MainActivity : BaseAC() {
     }
 }
 
-
 @Composable
 fun LazyListDemo() {
     var listItems = mutableListOf<ActivityItem>()

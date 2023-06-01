@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="ghost_white">#fff8f8ff</color>
+    <color name="my_color">#3F51B5</color>
+    <color name="my_dark_color">#303F9F</color>
+    <color name="my_accent_color">#FF4081</color>
 </resources>
