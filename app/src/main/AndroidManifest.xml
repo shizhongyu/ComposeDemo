@@ -30,6 +30,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.ModifierAC" android:theme="@style/Theme.ComposeDemo"/>
+        <activity android:name=".activity.ImageAC"/>
     </application>
 
 </manifest>
