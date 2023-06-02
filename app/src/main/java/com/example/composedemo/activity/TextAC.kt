@@ -17,7 +17,11 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.draw.drawWithCache
+import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.res.stringResource
@@ -43,6 +47,7 @@ import com.example.composedemo.ui.theme.ComposeDemoTheme
 /**
  * Compose 中的文字
  * https://developer.android.com/jetpack/compose/text?hl=zh-cn
+ * https://developer.android.com/jetpack/compose/graphics/draw/modifiers?hl=zh-cn
  */
 class TextAC : BaseAC() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -128,6 +133,16 @@ class TextAC : BaseAC() {
          * 部分文字选择
          */
         PartiallySelectableText()
+
+        /**
+         * 背景绘制
+         */
+        BgRoundRect()
+
+        /**
+         * 渐变背景
+         */
+        BgGradient()
     }
 
     @Composable
@@ -249,5 +264,43 @@ class TextAC : BaseAC() {
                 Text("And this one too")
             }
         }
+    }
+
+    @Composable
+    fun BgRoundRect() {
+        Text(
+            "Hello Compose!",
+            modifier = Modifier
+                .drawBehind {
+                    drawRoundRect(
+                        Color(0xFFBBAAEE),
+                        cornerRadius = CornerRadius(10.dp.toPx())
+                    )
+                }
+                .padding(10.dp)
+        )
+    }
+
+
+    @Composable
+    fun BgGradient() {
+        Text(
+            "Hello Compose!",
+            modifier = Modifier
+                .drawWithCache {
+                    val brush = Brush.linearGradient(
+                        listOf(
+                            Color(0xFF9E82F0),
+                            Color(0xFF42A5F5)
+                        )
+                    )
+                    onDrawBehind {
+                        drawRoundRect(
+                            brush,
+                            cornerRadius = CornerRadius(10.dp.toPx())
+                        )
+                    }
+                }
+        )
     }
 }
