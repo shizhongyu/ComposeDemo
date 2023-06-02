@@ -4,7 +4,9 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
@@ -19,7 +21,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.BlurredEdgeTreatment
 import androidx.compose.ui.draw.blur
@@ -27,17 +31,21 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ColorMatrix
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.composedemo.R
 import com.example.composedemo.ui.theme.ComposeDemoTheme
 
 
 /**
  * https://developer.android.com/jetpack/compose/graphics/images/customize?hl=zh-cn
+ * https://developer.android.com/jetpack/compose/graphics/draw/modifiers?hl=zh-cn
  */
 class ImageAC  : BaseAC() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -148,6 +156,50 @@ class ImageAC  : BaseAC() {
                         edgeTreatment = BlurredEdgeTreatment(RoundedCornerShape(8.dp))
                     )
             )
+
+            Image(
+                painter = painterResource(id = R.drawable.gugong),
+                contentDescription = "Sunset",
+                modifier = Modifier
+                    .graphicsLayer {
+                        this.scaleX = 1.2f
+                        this.scaleY = 0.8f
+                    }
+            )
+
+            Image(
+                painter = painterResource(id = R.drawable.gugong),
+                contentDescription = "Sunset",
+                modifier = Modifier
+                    .graphicsLayer {
+                        this.translationX = 100.dp.toPx()
+                        this.translationY = 10.dp.toPx()
+                    }
+            )
+
+            Column(modifier = Modifier.padding(16.dp)) {
+                Box(
+                    modifier = Modifier
+                        .size(200.dp)
+                        .graphicsLayer {
+                            clip = true
+                            shape = CircleShape
+                        }
+                        .background(Color(0xFFF06292))
+                ) {
+                    Text(
+                        "Hello Compose",
+                        style = TextStyle(color = Color.Black, fontSize = 46.sp),
+                        modifier = Modifier.align(Alignment.Center)
+                    )
+                }
+                Box(
+                    modifier = Modifier
+                        .size(200.dp)
+                        .clip(CircleShape)
+                        .background(Color(0xFF4DB6AC))
+                )
+            }
         }
     }
 }
