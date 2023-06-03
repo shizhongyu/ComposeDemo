@@ -33,6 +33,7 @@
         <activity android:name=".activity.ImageAC"/>
         <activity android:name=".activity.TextAC"/>
         <activity android:name=".activity.StateAC"/>
+        <activity android:name=".activity.CanvasAC"/>
     </application>
 
 </manifest>

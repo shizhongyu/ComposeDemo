@@ -25,6 +25,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.composedemo.activity.BaseAC
+import com.example.composedemo.activity.CanvasAC
 import com.example.composedemo.activity.ImageAC
 import com.example.composedemo.activity.ModifierAC
 import com.example.composedemo.activity.StateAC
@@ -55,6 +56,7 @@ fun LazyListDemo() {
     listItems.add(ActivityItem(ImageAC::class.simpleName.toString(), ImageAC::class.java))
     listItems.add(ActivityItem(TextAC::class.simpleName.toString(), TextAC::class.java))
     listItems.add(ActivityItem(StateAC::class.simpleName.toString(), StateAC::class.java))
+    listItems.add(ActivityItem(CanvasAC::class.simpleName.toString(), CanvasAC::class.java))
 
     LazyColumn(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
