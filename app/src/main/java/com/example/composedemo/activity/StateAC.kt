@@ -22,6 +22,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
@@ -60,6 +61,8 @@ class StateAC : BaseAC() {
             HelloContent()
 
             CounterComponent()
+
+            HelloScreen()
         }
     }
 
@@ -125,5 +128,28 @@ class StateAC : BaseAC() {
             }
         }
 
+    }
+
+    @Composable
+    fun HelloScreen() {
+        var name by rememberSaveable { mutableStateOf("") }
+
+        HelloContent(name = name, onNameChange = { name = it })
+    }
+
+    @Composable
+    fun HelloContent(name: String, onNameChange: (String) -> Unit) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text(
+                text = "Hello, $name",
+                modifier = Modifier.padding(bottom = 8.dp),
+                style = MaterialTheme.typography.bodyLarge
+            )
+            OutlinedTextField(
+                value = name,
+                onValueChange = onNameChange,
+                label = { Text("Name") }
+            )
+        }
     }
 }
