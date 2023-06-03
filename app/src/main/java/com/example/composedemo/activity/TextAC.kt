@@ -42,6 +42,7 @@ import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.example.composedemo.R
 import com.example.composedemo.ui.theme.ComposeDemoTheme
+import com.example.composedemo.ui.theme.Purple80
 
 
 /**
@@ -213,7 +214,7 @@ class TextAC : BaseAC() {
 
     @Composable
     fun LongText() {
-        Text("hello ".repeat(50), maxLines = 2)
+        Text("hello ".repeat(50), maxLines = 2, color = Purple80)
     }
 
     @Composable

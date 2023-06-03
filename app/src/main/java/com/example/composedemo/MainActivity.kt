@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.sp
 import com.example.composedemo.activity.BaseAC
 import com.example.composedemo.activity.ImageAC
 import com.example.composedemo.activity.ModifierAC
+import com.example.composedemo.activity.StateAC
 import com.example.composedemo.activity.TextAC
 import com.example.composedemo.data.ActivityItem
 import com.example.composedemo.ui.theme.ComposeDemoTheme
@@ -53,6 +54,7 @@ fun LazyListDemo() {
     listItems.add(ActivityItem(ModifierAC::class.simpleName.toString(), ModifierAC::class.java))
     listItems.add(ActivityItem(ImageAC::class.simpleName.toString(), ImageAC::class.java))
     listItems.add(ActivityItem(TextAC::class.simpleName.toString(), TextAC::class.java))
+    listItems.add(ActivityItem(StateAC::class.simpleName.toString(), StateAC::class.java))
 
     LazyColumn(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)

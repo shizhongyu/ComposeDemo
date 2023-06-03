@@ -32,6 +32,7 @@
         <activity android:name=".activity.ModifierAC" android:theme="@style/Theme.ComposeDemo"/>
         <activity android:name=".activity.ImageAC"/>
         <activity android:name=".activity.TextAC"/>
+        <activity android:name=".activity.StateAC"/>
     </application>
 
 </manifest>
