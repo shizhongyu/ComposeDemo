@@ -37,6 +37,7 @@
         <activity android:name=".activity.AnimationAC"/>
         <activity android:name=".activity.SlideAC"/>
         <activity android:name=".activity.ConstraintlayoutAC"/>
+        <activity android:name=".activity.ListAC"/>
     </application>
 
 </manifest>
