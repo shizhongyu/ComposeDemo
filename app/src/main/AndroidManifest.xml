@@ -34,6 +34,9 @@
         <activity android:name=".activity.TextAC"/>
         <activity android:name=".activity.StateAC"/>
         <activity android:name=".activity.CanvasAC"/>
+        <activity android:name=".activity.AnimationAC"/>
+        <activity android:name=".activity.SlideAC"/>
+        <activity android:name=".activity.ConstraintlayoutAC"/>
     </application>
 
 </manifest>
