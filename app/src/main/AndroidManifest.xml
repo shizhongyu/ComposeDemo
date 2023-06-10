@@ -44,6 +44,7 @@
         <activity android:name=".activity.StringAC"/>
         <activity android:name=".activity.LazyListAC"/>
         <activity android:name=".activity.LazyListSticky"/>
+        <activity android:name=".activity.RowColAC"/>
     </application>
 
 </manifest>

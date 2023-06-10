@@ -36,6 +36,7 @@ import com.example.composedemo.activity.LazyListAC
 import com.example.composedemo.activity.LazyListSticky
 import com.example.composedemo.activity.ListAC
 import com.example.composedemo.activity.ModifierAC
+import com.example.composedemo.activity.RowColAC
 import com.example.composedemo.activity.SlideAC
 import com.example.composedemo.activity.StateAC
 import com.example.composedemo.activity.StringAC
@@ -77,6 +78,7 @@ fun LazyListDemo() {
     listItems.add(ActivityItem(StringAC::class.simpleName.toString(), StringAC::class.java))
     listItems.add(ActivityItem(LazyListAC::class.simpleName.toString(), LazyListAC::class.java))
     listItems.add(ActivityItem(LazyListSticky::class.simpleName.toString(), LazyListSticky::class.java))
+    listItems.add(ActivityItem(RowColAC::class.simpleName.toString(), RowColAC::class.java))
 
 
 
