@@ -36,6 +36,7 @@ import com.example.composedemo.activity.ListAC
 import com.example.composedemo.activity.ModifierAC
 import com.example.composedemo.activity.SlideAC
 import com.example.composedemo.activity.StateAC
+import com.example.composedemo.activity.StringAC
 import com.example.composedemo.activity.TextAC
 import com.example.composedemo.data.ActivityItem
 import com.example.composedemo.ui.theme.ComposeDemoTheme
@@ -71,6 +72,7 @@ fun LazyListDemo() {
     listItems.add(ActivityItem(BoxLayoutAC::class.simpleName.toString(), BoxLayoutAC::class.java))
     listItems.add(ActivityItem(AnimateVisibilityAC::class.simpleName.toString(), AnimateVisibilityAC::class.java))
     listItems.add(ActivityItem(AnimateStateAC::class.simpleName.toString(), AnimateStateAC::class.java))
+    listItems.add(ActivityItem(StringAC::class.simpleName.toString(), StringAC::class.java))
 
     listItems.reverse()
 
