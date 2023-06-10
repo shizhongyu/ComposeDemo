@@ -47,6 +47,7 @@
         <activity android:name=".activity.RowColAC"/>
         <activity android:name=".activity.CustomLayoutAC"/>
         <activity android:name=".activity.GestureAC"/>
+        <activity android:name=".activity.NavigationAC"/>
     </application>
 
 </manifest>
