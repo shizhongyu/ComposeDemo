@@ -39,6 +39,7 @@
         <activity android:name=".activity.ConstraintlayoutAC"/>
         <activity android:name=".activity.ListAC"/>
         <activity android:name=".activity.BoxLayoutAC"/>
+        <activity android:name=".activity.AnimateVisibilityAC"/>
     </application>
 
 </manifest>
