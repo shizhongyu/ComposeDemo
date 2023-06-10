@@ -38,6 +38,7 @@
         <activity android:name=".activity.SlideAC"/>
         <activity android:name=".activity.ConstraintlayoutAC"/>
         <activity android:name=".activity.ListAC"/>
+        <activity android:name=".activity.BoxLayoutAC"/>
     </application>
 
 </manifest>
