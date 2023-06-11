@@ -48,6 +48,7 @@ import com.example.composedemo.activity.SlideAC
 import com.example.composedemo.activity.StateAC
 import com.example.composedemo.activity.StringAC
 import com.example.composedemo.activity.TextAC
+import com.example.composedemo.activity.ThemeAC
 import com.example.composedemo.data.ActivityItem
 import com.example.composedemo.ui.theme.ComposeDemoTheme
 
@@ -93,6 +94,7 @@ fun LazyListDemo() {
     listItems.add(ActivityItem(IntrinsicSizeAC::class.simpleName.toString(), IntrinsicSizeAC::class.java))
     listItems.add(ActivityItem(InAppPurchaseAC::class.simpleName.toString(), InAppPurchaseAC::class.java))
     listItems.add(ActivityItem(FlowAC::class.simpleName.toString(), FlowAC::class.java))
+    listItems.add(ActivityItem(ThemeAC::class.simpleName.toString(), ThemeAC::class.java))
 
 
     listItems.reverse()

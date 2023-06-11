@@ -52,6 +52,7 @@
         <activity android:name=".activity.IntrinsicSizeAC"/>
         <activity android:name=".activity.InAppPurchaseAC"/>
         <activity android:name=".activity.FlowAC"/>
+        <activity android:name=".activity.ThemeAC"/>
     </application>
 
 </manifest>
