@@ -35,6 +35,7 @@ import com.example.composedemo.activity.CustomLayoutAC
 import com.example.composedemo.activity.GestureAC
 import com.example.composedemo.activity.GridAC
 import com.example.composedemo.activity.ImageAC
+import com.example.composedemo.activity.InAppPurchaseAC
 import com.example.composedemo.activity.IntrinsicSizeAC
 import com.example.composedemo.activity.LazyListAC
 import com.example.composedemo.activity.LazyListSticky
@@ -89,6 +90,7 @@ fun LazyListDemo() {
     listItems.add(ActivityItem(NavigationAC::class.simpleName.toString(), NavigationAC::class.java))
     listItems.add(ActivityItem(GridAC::class.simpleName.toString(), GridAC::class.java))
     listItems.add(ActivityItem(IntrinsicSizeAC::class.simpleName.toString(), IntrinsicSizeAC::class.java))
+    listItems.add(ActivityItem(InAppPurchaseAC::class.simpleName.toString(), InAppPurchaseAC::class.java))
 
 
     listItems.reverse()
