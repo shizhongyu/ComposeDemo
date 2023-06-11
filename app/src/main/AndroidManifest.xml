@@ -54,6 +54,7 @@
         <activity android:name=".activity.FlowAC"/>
         <activity android:name=".activity.ThemeAC"/>
         <activity android:name=".activity.SlotAPIAC"/>
+        <activity android:name=".activity.ViewModelAC"/>
     </application>
 
 </manifest>

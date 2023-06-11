@@ -19,7 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.composedemo.ui.theme.ComposeDemoTheme
-import com.example.flowdemo.DemoViewModel
+import com.example.flowdemo.ShareFlowViewModel
 
 class FlowAC : BaseAC() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,12 +38,12 @@ class FlowAC : BaseAC() {
 
 
     @Composable
-    fun ScreenSetup(viewModel: DemoViewModel = viewModel()) {
+    fun ScreenSetup(viewModel: ShareFlowViewModel = viewModel()) {
         MainScreen(viewModel)
     }
 
     @Composable
-    fun MainScreen(viewModel: DemoViewModel) {
+    fun MainScreen(viewModel: ShareFlowViewModel) {
 
         // val count by viewModel.stateFlow.collectAsState()
         val count by viewModel.sharedFlow.collectAsState(initial = 0)
