@@ -49,6 +49,7 @@
         <activity android:name=".activity.GestureAC"/>
         <activity android:name=".activity.NavigationAC"/>
         <activity android:name=".activity.GridAC"/>
+        <activity android:name=".activity.IntrinsicSizeAC"/>
     </application>
 
 </manifest>
