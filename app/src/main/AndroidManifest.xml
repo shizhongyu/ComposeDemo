@@ -51,6 +51,7 @@
         <activity android:name=".activity.GridAC"/>
         <activity android:name=".activity.IntrinsicSizeAC"/>
         <activity android:name=".activity.InAppPurchaseAC"/>
+        <activity android:name=".activity.FlowAC"/>
     </application>
 
 </manifest>

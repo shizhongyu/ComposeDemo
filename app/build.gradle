@@ -62,6 +62,8 @@ dependencies {
     implementation 'com.android.billingclient:billing-ktx:5.2.0'
     implementation 'com.google.guava:guava:24.1-jre'
     implementation 'com.google.guava:guava:27.0.1-android'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
     implementation("io.coil-kt:coil-compose:2.4.0")
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
